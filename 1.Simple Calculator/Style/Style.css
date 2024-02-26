@@ -88,7 +88,7 @@ body {
 }
 
 
-#botaoBack {
+#backsp {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -101,16 +101,16 @@ body {
   left: -3%;
 }
 
-#botaoClean {
+#clearid {
   border-radius: 40px;
 }
 
-#botaoClean,
+#clearid,
 #botaoResultado {
   background-color: #f54d4d;
 }
 
-#botaoClean:hover,
+#clearid:hover,
 #botaoResultado:hover {
   background: #ca0303;
 }
@@ -122,12 +122,12 @@ body {
   outline: 0;
 }
 
-#botaoBack:hover,
+#backsp:hover,
 .operando:hover {
   background-color: #3b3b3b;
 }
 
-#botaoBack,
+#backsp,
 .operando {
   background-color: #747474;
   border-radius: 40px;
@@ -160,8 +160,7 @@ body {
 
   #otp {
     font-size: 3.5em;
-    font-family: 'SevenSegment';
-    src:url('SevenSegment.ttf');
+ 
   }
 
   .button {
@@ -198,8 +197,7 @@ body {
 
   #otp {
     font-size: 3.5em;
-    font-family: 'SevenSegment';
-    src:url('SevenSegment.ttf');
+ 
   }
 
   .button {
@@ -227,8 +225,7 @@ body {
 
   #otp {
     font-size: 5em;
-    font-family: 'SevenSegment';
-    src:url('SevenSegment.ttf');
+ 
   }
 
   .button {
