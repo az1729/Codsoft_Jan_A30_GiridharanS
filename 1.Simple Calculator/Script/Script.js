@@ -66,7 +66,6 @@ calcularNumero.addEventListener("click", calcular);
 
 function calcular() {
     let otp = document.getElementById("otp").value;
-
     let novaString1 = otp.replace(/x/g, "*");
     let novaString2 = novaString1.replace(/÷/g, "/");
     let novaStringFinal = novaString2;
