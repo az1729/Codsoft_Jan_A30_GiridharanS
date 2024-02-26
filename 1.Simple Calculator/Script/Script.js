@@ -1,7 +1,7 @@
 let otp = document.getElementById("otp");
 
-let botoesNumericos = document.querySelectorAll(".numero");
-botoesNumericos.forEach(function (button) {
+let btNumerics = document.querySelectorAll(".numero");
+btNumerics.forEach(function (button) {
     button.addEventListener("click", function () {
 
         if (otp.value === "0") {
@@ -11,34 +11,34 @@ botoesNumericos.forEach(function (button) {
     });
 });
 
-let botaoPonto = document.querySelectorAll(".ponto");
-botaoPonto.forEach(function (botao) {
-    botao.addEventListener("click", function () {
+let btpon = document.querySelectorAll(".ponto");
+btpon.forEach(function (bttt) {
+    bttt.addEventListener("click", function () {
 
-        if (otp.value.includes(".")) {
+        if (otp.value.includes(".") && otp.value.includes("+-*÷")) {
             return;
         }
-        otp.value += botao.innerText.trim();
+        otp.value += bttt.innerText.trim();
     });
 });
 
-let botoesOperando = document.querySelectorAll(".operando");
-botoesOperando.forEach(function (botao) {
-    botao.addEventListener("click", function () {
+let btope = document.querySelectorAll(".operando");
+btope.forEach(function (bttt) {
+    bttt.addEventListener("click", function () {
 
         if (otp.value === "0") {
             otp.value = ""
         }
 
-        let ultimoCaractere = otp.value.slice(-1);
-        let ultimoCaractereEOperador = "+-x÷".includes(ultimoCaractere);
+        let ultica = otp.value.slice(-1);
+        let ulticaEOperador = "+-x÷".includes(ultica);
 
-        if (!ultimoCaractereEOperador) {
-            otp.value += botao.innerText.trim();
+        if (!ulticaEOperador) {
+            otp.value += bttt.innerText.trim();
         }
         else {
             otp.value = otp.value.substring(0, otp.value.length - 1);
-            otp.value += botao.innerText.trim();
+            otp.value += bttt.innerText.trim();
         }
     });
 });
@@ -50,7 +50,7 @@ function limpar() {
     otp.value = "0"
 };
 
-let apagarNumero = document.getElementById("botaoBack");
+let apagarNumero = document.getElementById("backspa");
 apagarNumero.addEventListener("click", apagar);
 
 function apagar() {
@@ -61,11 +61,12 @@ function apagar() {
     }
 };
 
-let calcularNumero = document.getElementById("botaoResultado");
+let calcularNumero = document.getElementById("btzeroo");
 calcularNumero.addEventListener("click", calcular);
 
 function calcular() {
     let otp = document.getElementById("otp").value;
+
     let novaString1 = otp.replace(/x/g, "*");
     let novaString2 = novaString1.replace(/÷/g, "/");
     let novaStringFinal = novaString2;
